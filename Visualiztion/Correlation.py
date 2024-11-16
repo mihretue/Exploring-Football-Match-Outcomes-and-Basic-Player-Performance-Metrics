@@ -23,6 +23,8 @@ for i in range(len(corr_matrix.columns)):
 # Show the plot
 # plt.savefig('Correlation.png', dpi=300, bbox_inches='tight', pad_inches=0.1)
 plt.show()
-strong_corr = corr_matrix[(corr_matrix > 0.7) | (corr_matrix < -0.7)]
-print("Strong Correlations:")
-print(strong_corr)
+# strong_corr = corr_matrix[(corr_matrix > 0.7) | (corr_matrix < -0.7)]
+# print("Strong Correlations:")
+# print(strong_corr)
+correlations_with_var = corr_matrix["Referee"].sort_values(ascending=False)
+print(correlations_with_var)
